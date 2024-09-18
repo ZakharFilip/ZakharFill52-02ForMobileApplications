@@ -9,7 +9,9 @@ var counter1 = 0
     var counter2 = 0
 var count = 0
 
-    for (  item in str)
+    var III:Int=str.length
+
+    for (  item in 1..III)
     {
         SpecChar = str[counter1]
         for (item1 in str)
