@@ -7,6 +7,7 @@ fun main() {
 
 
     var SpecChar: Char
+    var _char: Char='_'
     var countermain = 0
     var counter1 = 0
     var counter2:Int= 0
@@ -22,7 +23,7 @@ fun main() {
             SpecChar = str[counter1]
             for (item in 1..III) {
                 if (str[item] == SpecChar) {
-                    str[item] = '_'
+                    str[item] = _char
                     countermain++
                 }
             }
