@@ -1,35 +1,35 @@
 package OsnoviZadachi
 
+//НЕ ГОТОВО!!!
 fun main() {
-    var str:String = readln()
+    var str: String = readln()
 
-    var Vivod:String=""
+    var Vivod: String = ""
 
-
-    var SpecChar: Char
-    var _char: Char='_'
-    var countermain = 0
+    var _char: Char = '_'
     var counter1 = 0
-    var counter2:Int= 0
-    var count = 0
+    var countermain = 0
 
-    var III:Int=str.length
+    while (counter1 < str.length) {
+        val SpecChar: Char = str[counter1]
+        var tempStr = str
 
-    while (true)
-    {
-        if ( str[counter1]=='_' )
-        {}
-        else {
-            SpecChar = str[counter1]
-            for (item in 1..III) {
-                if (str[item] == SpecChar) {
-                    str[item] = _char
-                    countermain++
-                }
+
+        for (item in counter1 + 1 until str.length) {
+            if (str[item] == SpecChar) {
+                tempStr = tempStr.replaceRange(item, item + 1, _char.toString())
+                countermain++
             }
-            Vivod=Vivod+SpecChar+countermain
         }
 
+        if (SpecChar != _char) {
+            Vivod += SpecChar.toString() + countermain
+        }
+
+        str = tempStr
         counter1++
+        countermain = 0
     }
+
+    println(Vivod)
 }
