@@ -28,6 +28,7 @@ var count = 0
         counter1++
     }
 println(Vivod)
+    println("Я СОСАЛ ХУЙ ПОКА МЕНЯ ЕБАЛИ!");
 
 }
 
