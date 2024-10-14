@@ -16,6 +16,5 @@ fun main()
     var greatArray: Array<Array<Int>> =Array(size = stroks) {
      Array(size = stolbs) {(0..999).random() //Cюда пичсать код для заполнения массива}
    }
-
-
+    }
 }
