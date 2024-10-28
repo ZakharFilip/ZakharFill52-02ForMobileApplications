@@ -19,7 +19,7 @@ public fun Trow(TrowC:Int,TrowU: Int ):Int
     when(TrowU)
     {
         TrowC -> resoult = 0
-        1 && TrowC==3 -> resoult = 0
+       // 1 && TrowC==3 -> resoult = 0
 
 
     }
