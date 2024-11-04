@@ -1,5 +1,6 @@
 package Class
 
-class Triengle {
+class Triengle(val a: Dot, val b: Dot, val c: Dot)
+{
 
 }

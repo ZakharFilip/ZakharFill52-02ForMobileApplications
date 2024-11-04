@@ -1,5 +1,6 @@
 package Class
 
-class Dot {
+class Dot(val x: Double, val y: Double)
+{
 
 }
