@@ -17,7 +17,6 @@ fun main() {
     {
         for (j in 0 until cols)
         {
-
             array[i][j] = scanner.nextInt()
         }
     }

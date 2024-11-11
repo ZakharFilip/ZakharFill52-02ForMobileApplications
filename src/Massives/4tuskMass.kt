@@ -10,28 +10,27 @@ fun main() {
     val intersection = findIntersection(testarray1, testarray2)
 
 
-    println("Пересечение массивов: ${intersection.joinToString(", ")}")
+    println("Пересечение массивов: ${intersection}")
 }
 
 
-fun findIntersection(array1: IntArray, array2: IntArray): IntArray {
+fun findIntersection(array1: IntArray, array2: IntArray): String {
+    val frequencyList= mutableListOf(0)
 
-    val frequencyMap = mutableMapOf<Int, Int>()
-
-    for (num in array1)
+    for (i in 0..array1.size )
     {
-        frequencyMap[num] = frequencyMap.getOrDefault(num, 0) + 1
-    }
-
-    val intersection = mutableListOf<Int>()
-
-    for (num in array2) {
-        if (frequencyMap.containsKey(num) && frequencyMap[num]!! > 0) {
-            intersection.add(num)
-
-            frequencyMap[num] = frequencyMap[num]!! - 1
+        for (j in 0..array2.size)
+        {
+           if (array1[i]==array2[j])
+           {frequencyList.add(array1[i]) }
         }
     }
+ var vivod: String="";
+    for (i in 0..frequencyList.size)
+    {
+        vivod= vivod +frequencyList[i]
+        vivod= vivod + " "
+    }
 
-    return intersection.toIntArray()
+    return vivod
 }
