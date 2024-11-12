@@ -1,16 +1,28 @@
 package Functions
 
-fun main()
-{
-    var userTrow:Int;
-    var compTrow:Int;
+fun main() {
+    var proverka: Int = 0;
 
-    compTrow=(1..3).random()
-    println("Выбирай" +
-            "1-камень" +
-            "2-ножницы" +
-            "3-бумага");
-    userTrow= readln().toInt();
+    while (proverka == 0){
+    var userTrow: Int;
+    var compTrow: Int;
+
+    compTrow = (1..3).random()
+    println(
+        "Выбирай" +
+                "1-камень" +
+                "2-ножницы" +
+                "3-бумага"
+    );
+    userTrow = readln().toInt();
+
+    when (Trow(compTrow, userTrow)) {
+        1 -> proverka= 1
+        2 -> println("Вы проиграли :(");
+        0 -> println("Ничья :/");
+    }
+   }
+    println("Вы выиграли :)")
 }
 
 public fun Trow(TrowC:Int,TrowU: Int ):Int
